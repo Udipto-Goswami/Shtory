@@ -1,0 +1,16 @@
+{
+  "name": "shtory",
+  "version": "1.0.0",
+  "description": "An Application for creative story writers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Udipto Goswami",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "electron": "^2.0.0",
+    "jquery": "^3.3.1"
+  }
+}

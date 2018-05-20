@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a href="#"><strong>SHtory</strong></a></li>
+              
+            </ul> 
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid coloring-black"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
+                <div class="row">
+                    <div class="col-md-12 custom_col">
+                        <div class="jumbotron custom-color">
+                            <h1>Story Title</h1>
+                            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                            <p><a class="btn btn-primary" role="button" href="#">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="node_modules/jquery/dist/jquery.js"></script>
+     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+         <script src="assets/js/script.min.js"></script>
+
+<script>
+
+const electron = require('electron');
+const {ipcRenderer} = electron;
+const ul = document.querySelector('ul');
+
+
+
+ipcRenderer.on('item:add',function(e, item){
+
+const span = document.createElement('span');
+span.setAttribute('aria-hidden','true');
+const closeBtn = document.createTextNode('×');
+span.appendChild(closeBtn);
+const button = document.createElement('button');
+button.setAttribute('class','close');
+button.setAttribute('style','margin-top:5px;margin-left:0px;margin-right:19px;color:white');
+
+//deleting individual elements
+$(button).click('click', function(){
+$(this).parent().remove();
+ });
+const a = document.createElement('a');
+a.setAttribute('href', '#');
+const li = document.createElement('li');
+const itemText = document.createTextNode(item);
+
+button.appendChild(span);
+a.appendChild(itemText);
+a.appendChild(button);
+li.appendChild(a);
+ul.appendChild(li);
+});
+
+
+
+ipcRenderer.on('item:clear',function(){
+ul.innerHTML='';
+const strong = document.createElement('strong');
+const a = document.createElement('a');
+a.setAttribute('href', '#');
+const li = document.createElement('li');
+li.setAttribute('class','sidebar-brand');
+const itemText = document.createTextNode('Shtory');
+strong.appendChild(itemText);
+a.appendChild(strong);
+li.appendChild(a);
+ul.appendChild(li);
+
+});
+
+
+</script>
+</body>
+
+</html>
