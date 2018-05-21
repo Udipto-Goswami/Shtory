@@ -2,16 +2,27 @@
 <html>
 <head>
 	<title>Add Shopping List Item</title>
+
+   
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+
 </head>
 <body>
-<form>
+<form class="form">
 	<div>
-		<label>Enter Item</label>
-		<input type="text" id="item" autofocus>
+		<div class="form-group text-center form-control " ><input type="text" id="item" placeholder="Enter Item" autofocus></div>
+		
 	</div>
-	<button type="submit">Add Item</button>
+	<div class="form-group text-center"><button class="btn btn-primary" type="submit">Add Item</button></div>
 </form>
 
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+         <script src="assets/js/script.min.js"></script>
 <script>
 	
 	const electron = require('electron');
