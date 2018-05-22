@@ -1,7 +1,7 @@
 # Shtory
 A Desktop application for Creative story writers.
 
-NOTE: Please install the node package when you are using the code.
+# NOTE: Please install the node package when you are using the code.
 The following are the node commands:
 npm install
 npm install --save electron
