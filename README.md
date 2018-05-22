@@ -1,5 +1,5 @@
 # Shtory
-A Desktop application for Creative story writers.
+<span style="color:green;">A Desktop application for Creative story writers.</span>
 
 <b> NOTE:</b> Please install the node package when you are using the code.
 The following are the node commands:
