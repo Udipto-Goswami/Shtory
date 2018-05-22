@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
-<body>
+<body style="overflow: hidden">
     <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -21,11 +21,21 @@
         <div class="page-content-wrapper">
             <div class="container-fluid coloring-black"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
                 <div class="row">
-                    <div class="col-md-12 custom_col">
+                    <div class="col-md-12 custom_col" style="height: 768px" >
                         <div class="jumbotron custom-color">
-                            <h1>Story Title</h1>
-                            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                            <p><a class="btn btn-primary" role="button" href="#">Learn more</a></p>
+                            <form>
+    <div class="form-group">
+    <label style="font-size:36px;"><strong>Start Your SHtory here</strong></label><input type="text" placeholder="Story Title" class="form-control form-control-lg" /></div>
+    <div class="form-group">
+
+    	<input type="text" placeholder="Category, if Any" class="form-control form-control-lg" /></div>
+    <div class="form-group">
+    	<textarea placeholder="Shtory Content" rows="10" cols="30" class="form-control" style="width:100%;padding:15px;"></textarea></div><small class="form-text text-muted" style="margin-bottom:15px;">By clicking Save your work in this window will be saved.</small>
+    <div
+        class="form-group">
+        <p><input type="submit" value="Submit" class="btn btn-success" role="button" href="#"/><input type="reset" class="btn btn-danger" role="button" href="#" style="margin-left:10px;" value="Cancel"/></p>
+        </div>
+</form>
                         </div>
                     </div>
                 </div>
